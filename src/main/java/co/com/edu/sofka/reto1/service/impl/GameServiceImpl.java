@@ -11,16 +11,18 @@ public class GameServiceImpl implements GameService {
 
     PlayerService playerService = new PlayerServiceImpl();
 
+
+
     @Override
     public void createGame() {
 
         welcome();
         System.out.println("==============================================");
         //Creamos lista de jugadores
-        List<Player> players = playerService.createPlayers();
+        playerService.createPlayers();
         System.out.println("==============================================");
         //Mostrar Jugadores y puntos
-        playerService.showPlayers(players);
+        playerService.showPlayers();
         System.out.println("==============================================");
     }
 

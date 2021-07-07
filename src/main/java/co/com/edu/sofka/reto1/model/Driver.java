@@ -9,8 +9,6 @@ public class Driver {
 
     private Integer id;
 
-    private Player player;
-
     private Car car;
 
     public Driver(){}

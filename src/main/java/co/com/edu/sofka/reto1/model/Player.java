@@ -13,10 +13,13 @@ public class Player {
 
     private int points;
 
-    public Player(Integer id, String name, int points) {
+    private Driver driver;
+
+    public Player(Integer id, String name, int points, Driver driver) {
         this.id = id;
         this.name = name;
         this.points = points;
+        this.driver = driver;
     }
 
     public Player(){}
