@@ -13,8 +13,6 @@ public class Player {
 
     private int points;
 
-    private Driver driver;
-
     public Player(Integer id, String name, int points) {
         this.id = id;
         this.name = name;
