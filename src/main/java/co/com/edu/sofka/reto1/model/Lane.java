@@ -9,10 +9,10 @@ public class Lane {
 
     private Integer id;
 
-    private int idCar;
+    private Car car;
 
-    public Lane(Integer id, int idCar) {
+    public Lane(Integer id, Car car) {
         this.id = id;
-        this.idCar = idCar;
+        this.car = car;
     }
 }

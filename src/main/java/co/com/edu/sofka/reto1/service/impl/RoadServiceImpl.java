@@ -1,9 +1,9 @@
-package co.com.edu.sofka.reto1.domain.impl;
+package co.com.edu.sofka.reto1.service.impl;
 
 import co.com.edu.sofka.reto1.model.Player;
 import co.com.edu.sofka.reto1.model.Road;
-import co.com.edu.sofka.reto1.domain.LaneService;
-import co.com.edu.sofka.reto1.domain.RoadService;
+import co.com.edu.sofka.reto1.service.LaneService;
+import co.com.edu.sofka.reto1.service.RoadService;
 
 import java.util.List;
 import java.util.Scanner;

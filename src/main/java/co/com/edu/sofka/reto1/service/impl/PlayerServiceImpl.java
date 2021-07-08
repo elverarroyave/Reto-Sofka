@@ -1,8 +1,8 @@
-package co.com.edu.sofka.reto1.domain.impl;
+package co.com.edu.sofka.reto1.service.impl;
 
 import co.com.edu.sofka.reto1.model.Player;
-import co.com.edu.sofka.reto1.domain.DriverService;
-import co.com.edu.sofka.reto1.domain.PlayerService;
+import co.com.edu.sofka.reto1.service.DriverService;
+import co.com.edu.sofka.reto1.service.PlayerService;
 
 import java.util.ArrayList;
 import java.util.List;

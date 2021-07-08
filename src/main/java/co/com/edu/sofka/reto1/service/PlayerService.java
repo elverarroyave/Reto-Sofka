@@ -1,4 +1,4 @@
-package co.com.edu.sofka.reto1.domain;
+package co.com.edu.sofka.reto1.service;
 
 import co.com.edu.sofka.reto1.model.Player;
 

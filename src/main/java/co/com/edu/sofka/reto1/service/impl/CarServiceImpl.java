@@ -1,7 +1,7 @@
-package co.com.edu.sofka.reto1.domain.impl;
+package co.com.edu.sofka.reto1.service.impl;
 
 import co.com.edu.sofka.reto1.model.Car;
-import co.com.edu.sofka.reto1.domain.CarService;
+import co.com.edu.sofka.reto1.service.CarService;
 
 import java.util.ArrayList;
 import java.util.List;
