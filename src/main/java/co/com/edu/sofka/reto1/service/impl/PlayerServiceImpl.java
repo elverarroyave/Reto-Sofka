@@ -30,6 +30,12 @@ public class PlayerServiceImpl implements PlayerService {
     }
 
     @Override
+    public void resetPlayers() {
+        players.clear();
+        driverService.resetDrivers();
+    }
+
+    @Override
     public List<Player> getPlayers() {
         return players;
     }

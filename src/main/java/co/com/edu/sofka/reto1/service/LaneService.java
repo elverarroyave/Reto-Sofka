@@ -8,5 +8,7 @@ import java.util.List;
 public interface LaneService {
     public void createLanes(List<Player> players);
 
+    void resetLanes();
+
     List<Lane> getAllLanes();
 }

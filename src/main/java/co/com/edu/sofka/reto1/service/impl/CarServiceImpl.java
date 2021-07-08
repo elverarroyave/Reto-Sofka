@@ -19,6 +19,11 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
+    public void resetCars() {
+        cars.clear();
+    }
+
+    @Override
     public Car findCarById(int id) {
         return cars.get(id);
     }

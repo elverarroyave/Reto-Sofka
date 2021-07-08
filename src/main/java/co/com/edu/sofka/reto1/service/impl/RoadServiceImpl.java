@@ -35,6 +35,11 @@ public class RoadServiceImpl implements RoadService {
     }
 
     @Override
+    public void resetRoad() {
+        laneService.resetLanes();
+    }
+
+    @Override
     public void roadDetail() {
         System.out.println("Distancia de la pista: " + road.getDistance());
         System.out.println("Cantidad de carriles: " + road.getLanes().size());

@@ -22,6 +22,11 @@ public class LanseServiceImpl implements LaneService {
     }
 
     @Override
+    public void resetLanes() {
+        lanes.clear();
+    }
+
+    @Override
     public List<Lane> getAllLanes() {
         return lanes;
     }

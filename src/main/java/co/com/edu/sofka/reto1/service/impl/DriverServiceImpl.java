@@ -26,6 +26,12 @@ public class DriverServiceImpl implements DriverService {
     }
 
     @Override
+    public void resetDrivers() {
+        drivers.clear();
+        carService.resetCars();
+    }
+
+    @Override
     public Driver findById(int id) {
         return drivers.get(id);
     }

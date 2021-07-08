@@ -10,5 +10,7 @@ public interface RoadService {
 
     Road getRoad();
 
+    void resetRoad();
+
     void roadDetail();
 }
