@@ -1,13 +1,11 @@
-package co.com.edu.sofka.reto1.service.impl;
+package co.com.edu.sofka.reto1.domain.impl;
 
-import co.com.edu.sofka.reto1.model.Driver;
 import co.com.edu.sofka.reto1.model.Player;
-import co.com.edu.sofka.reto1.service.DriverService;
-import co.com.edu.sofka.reto1.service.PlayerService;
+import co.com.edu.sofka.reto1.domain.DriverService;
+import co.com.edu.sofka.reto1.domain.PlayerService;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class PlayerServiceImpl implements PlayerService {
@@ -42,7 +40,6 @@ public class PlayerServiceImpl implements PlayerService {
             System.out.println("Name: " + player.getName());
             System.out.println("Points: " + player.getPoints());
             System.out.println("Recorrido: " + player.getDriver().getCar().getRecorrido());
-            System.out.println();
         }
     }
 }
