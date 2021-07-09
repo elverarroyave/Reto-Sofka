@@ -20,7 +20,7 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public void resetCars() {
-        cars.clear();
+        cars.forEach(car -> car.setRecorrido(0));
     }
 
     @Override

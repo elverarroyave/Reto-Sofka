@@ -11,16 +11,16 @@ public class Podium {
 
     private Player firstPosition;
 
-    private Player secundPosition;
+    private Player secondPosition;
 
     private Player thirdPosition;
 
     public Podium() {}
 
-    public Podium(Integer id, Player firstPosition, Player secundPosition, Player thirdPosition) {
+    public Podium(Integer id, Player firstPosition, Player secondPosition, Player thirdPosition) {
         this.id = id;
         this.firstPosition = firstPosition;
-        this.secundPosition = secundPosition;
+        this.secondPosition = secondPosition;
         this.thirdPosition = thirdPosition;
     }
 }

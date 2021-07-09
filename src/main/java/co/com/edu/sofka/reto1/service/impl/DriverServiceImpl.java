@@ -27,7 +27,6 @@ public class DriverServiceImpl implements DriverService {
 
     @Override
     public void resetDrivers() {
-        drivers.clear();
         carService.resetCars();
     }
 

@@ -11,5 +11,5 @@ public interface PlayerService {
 
     public List<Player> getPlayers();
 
-    public void showPlayers();
+    //public void showPlayers();
 }

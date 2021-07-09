@@ -18,20 +18,28 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public void createPlayers() {
-        System.out.print("Ingrese la cantidad de jugadores: ");
-        int numberOfPalyers = in.nextInt();
+        int numberOfPalyers = getNumberPlayers();
         driverService.createDrivers(numberOfPalyers);
         for (int i = 0; i < numberOfPalyers; i++) {
             System.out.print("Ingrese el nombre del jugador #" + (i+1) +": ");
             String namePlayer = in.next().toUpperCase();
-            Player player = new Player(i, namePlayer,0, driverService.findById(i));
+            Player player = new Player(i, namePlayer, driverService.findById(i));
             players.add(player);
         }
     }
 
+    private int getNumberPlayers(){
+        int numberOfPalyers = 0;
+        do {
+            System.out.print("Ingrese la cantidad de jugadores(mínimo 3): ");
+            numberOfPalyers = in.nextInt();
+            if(numberOfPalyers<3) System.out.println("La cantidad debe ser mínimo 3.");
+        }while(numberOfPalyers<3);
+        return numberOfPalyers;
+    }
+
     @Override
     public void resetPlayers() {
-        players.clear();
         driverService.resetDrivers();
     }
 
@@ -40,12 +48,13 @@ public class PlayerServiceImpl implements PlayerService {
         return players;
     }
 
+    /*
     @Override
     public void showPlayers() {
         for(Player player: players){
             System.out.println("Name: " + player.getName());
-            System.out.println("Points: " + player.getPoints());
             System.out.println("Recorrido: " + player.getDriver().getCar().getRecorrido());
         }
     }
+     */
 }
