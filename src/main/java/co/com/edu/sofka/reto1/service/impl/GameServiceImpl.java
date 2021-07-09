@@ -2,6 +2,7 @@ package co.com.edu.sofka.reto1.service.impl;
 
 import co.com.edu.sofka.reto1.model.Car;
 import co.com.edu.sofka.reto1.model.Lane;
+import co.com.edu.sofka.reto1.persistence.PlayerPersisten;
 import co.com.edu.sofka.reto1.service.GameService;
 import co.com.edu.sofka.reto1.service.PlayerService;
 import co.com.edu.sofka.reto1.service.PodiumService;
@@ -21,6 +22,7 @@ public class GameServiceImpl implements GameService {
     PlayerService playerService = new PlayerServiceImpl();
     RoadService roadService = new RoadServiceImpl();
     PodiumService podiumService = new PodiumServiceImpl();
+    PlayerPersisten playerPersisten = new PlayerPersisten();
 
     List<Player> windPlayers = new ArrayList<>();
     int numGame = 0;
@@ -49,6 +51,9 @@ public class GameServiceImpl implements GameService {
         List<Lane> lanes = roadService.getRoad().getLanes();
         loop(lanes);
         podiumService.createPodium(windPlayers);
+        //podiumService.showPodium(windPlayers);
+        playerPersisten.saveWinnersPlayers(windPlayers);
+        playerPersisten.showPlayers(windPlayers);
     }
 
     /**

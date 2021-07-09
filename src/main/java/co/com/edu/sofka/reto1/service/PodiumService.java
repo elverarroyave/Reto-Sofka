@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface PodiumService {
     void createPodium(List<Player> windPlayers);
+    void showPodium(List<Player> windPlayer);
 }

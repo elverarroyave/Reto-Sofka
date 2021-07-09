@@ -22,7 +22,6 @@ public class PodiumServiceImpl implements PodiumService {
         );
         podiumList.add(podium);
         addPoints(windPlayers);
-        showPodium(windPlayers);
     }
 
     private void addPoints(List<Player> windPlayers){
@@ -32,7 +31,7 @@ public class PodiumServiceImpl implements PodiumService {
         windPlayers.get(2).addThirdPoint();
     }
 
-    private void showPodium(List<Player> windPlayers){
+    public void showPodium(List<Player> windPlayers){
         int index = 0;
         for (Player player : windPlayers) {
             System.out.println((index + 1) + "° - " + player.getName());
