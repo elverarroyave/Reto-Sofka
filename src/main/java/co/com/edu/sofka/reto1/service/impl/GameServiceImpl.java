@@ -13,8 +13,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * @Author: Elver Arroyave
- * @Version: 1.0
+ * @Author Elver Arroyave
+ * @Version 1.0
  */
 public class GameServiceImpl implements GameService {
 
@@ -34,19 +34,11 @@ public class GameServiceImpl implements GameService {
     public void createGame() {
         recopileDataGame();
         do {
-            gameIndex(numGame++);
+            showGameIndex(numGame++);
             play();
             resetGame();
             System.out.println("Correr de nuevo? si/no");
         }while(in.next().equalsIgnoreCase("si"));
-    }
-
-    /**
-     * Metodo para resetar los valores necesarios del juego, para dar inico a una nueva carrera.
-     */
-    void resetGame(){
-        playerService.resetPlayers();
-        windPlayers.clear();
     }
 
     /**
@@ -64,7 +56,7 @@ public class GameServiceImpl implements GameService {
      * @param lanes: Lista de carriles y autos de carrera en ejecución
      */
     private void loop(List<Lane> lanes){
-        boolean play = true;
+        boolean play;
         do{
             Lane laneToPlay = lanes.get(randomCarToPlay(lanes.size()));
             moveCar(laneToPlay.getCar());
@@ -80,6 +72,14 @@ public class GameServiceImpl implements GameService {
             showWind(lane.getCar());
         }
         return (lanes.size() == 0);
+    }
+
+    /**
+     * Metodo para resetar los valores necesarios del juego, para dar inico a una nueva carrera.
+     */
+    void resetGame(){
+        playerService.resetPlayers();
+        windPlayers.clear();
     }
 
     /**
@@ -142,7 +142,7 @@ public class GameServiceImpl implements GameService {
      * Identificador del juego en cada nueva carrera
      * @param i: identificador del juego
      */
-    private void gameIndex(int i){
+    private void showGameIndex(int i){
         System.out.println("**********************************************");
         System.out.println("************=======Game#"+(i+1)+"=======**************");
         System.out.println("**********************************************");

@@ -19,9 +19,4 @@ public class Game {
 
     public Game(){}
 
-    public Game(int id, List<Player> players, Road road ){
-        this.id = id;
-        this.players = players;
-        this.road = road;
-    }
 }

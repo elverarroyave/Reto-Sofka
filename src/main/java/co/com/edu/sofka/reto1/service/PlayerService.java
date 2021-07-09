@@ -5,11 +5,9 @@ import co.com.edu.sofka.reto1.model.Player;
 import java.util.List;
 
 public interface PlayerService {
-    public void createPlayers();
+    void createPlayers();
 
-    public void resetPlayers();
+    void resetPlayers();
 
-    public List<Player> getPlayers();
-
-    //public void showPlayers();
+    List<Player> getPlayers();
 }

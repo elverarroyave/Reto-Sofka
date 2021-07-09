@@ -10,7 +10,6 @@ import java.util.List;
 
 public class PodiumServiceImpl implements PodiumService {
 
-    List<Player> winners = new ArrayList<>();
     List<Podium> podiumList = new ArrayList<>();
 
     @Override
