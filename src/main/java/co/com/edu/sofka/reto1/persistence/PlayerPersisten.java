@@ -83,15 +83,13 @@ public class PlayerPersisten {
 
     public void showPlayers(List<Player> winners){
         List<Player> players = (List<Player>) manager.createQuery("FROM Player").getResultList();
-        int index = 0;
-        for (Player player : players) {
-            for (int i = 0; i < 3; i++) {
-                if(player.getName().equalsIgnoreCase(winners.get(i).getName())){
+        for (int index = 0; index < 3; index++) {
+            for(Player player: players){
+                if(winners.get(index).getName().equalsIgnoreCase(player.getName())){
                     System.out.println((index + 1) + "° - " + player.getName());
                     System.out.println("Puntos de 1° posición -> " + player.getFirstPositionPoints());
                     System.out.println("Puntos de 2° posición -> " + player.getSecondPositionPoints());
                     System.out.println("Puntos de 3° posición -> " + player.getThirdPositionPoints());
-                    index++;
                 }
             }
         }
